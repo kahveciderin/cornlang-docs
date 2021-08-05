@@ -36,16 +36,16 @@ fun main => none {
 Save the file and go back to your terminal window. On Linux or MacOS, enter the following commands to compile and run the program:
 
 ```bash
-$ cornpile hello_world.corn
-$ ./hello_world
+cornpile hello_world.corn
+./hello_world
 Hello, world!
 ```
 
 On Windows, enter the command `.\hello_world.exe` instead of `./hello_world`:
 
 ```cmd
-> cornpile hello_world.corn
-> .\hello_world.exe
+cornpile hello_world.corn
+.\hello_world.exe
 Hello, world!
 ```
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -7,8 +8,8 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/docsify-themeable@0.8.4/dist/css/theme-simple-dark.css">
-
-
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
   <style>
     /* Custom color theme. */
@@ -39,8 +40,20 @@
     .markdown-section td {
       border-bottom: 2px solid var(--table-cell-border-color);
     }
+
+    .docsify-copy-code-button{
+      background-color: #191B20 !important;
+      color: #9C9C9A !important;
+    }
+    pre:not(:hover) .docsify-copy-code-button{
+      opacity: 0 !important;
+    }
+    pre:hover .docsify-copy-code-button{
+      opacity: 1 !important;
+    }
   </style>
 </head>
+
 <body>
   <div data-app id="main">Please wait...</div>
   <script>
@@ -48,14 +61,22 @@
       el: '#main',
       name: '',
       repo: '',
-      loadSidebar: true
+      loadSidebar: true,
+      copyCode: {
+        buttonText: '<i class="fa fa-copy"></i>',
+        errorText: 'Error',
+        successText: 'Copied'
+      }
     }
-    </script>
+  </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-prism@latest/dist/docsify-prism.min.js"></script>ü
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="/prism-corn.js"></script>
+  <script src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
+  <script src="https://unpkg.com/docsify-copy-code@2"></script>
 </body>
+
 </html>
