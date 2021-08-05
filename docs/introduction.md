@@ -30,7 +30,7 @@ The Corn language hopes to support many other users as well, and we would love t
 
 ## Who This Book is For
 
-This book assumes you are familiar with programming and have some experience with programming languages, but doesn't make any assumptions about which one. We've tried to make the learning material for Cornlang broadly accessible to those from a wide variety of programming backgrounds. We don't spend a lot of time about what programming *is* or how to think about common problems. If you are entirely new to programming hovewer, we recommend you start with a book that introduces you to programming.
+This book assumes you are familiar with programming and have some experience with programming languages but doesn't make any assumptions about which one. We've tried to make the learning material for Cornlang broadly accessible to those from a wide variety of programming backgrounds. We don't spend a lot of time about what programming *is* or how to think about common problems. If you are entirely new to programming however, we recommend you start with a book that introduces you to programming.
 
 ## How to Use This Book
 
