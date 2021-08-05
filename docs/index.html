@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-themeable@0.8.4/dist/css/theme-simple-dark.css">
+
+
+
+  <style>
+    /* Custom color theme. */
+    :root {
+      --mono-hue: 220;
+      --theme-hue: 180;
+      --theme-saturation: 50%;
+
+      --table-cell-border-width: 0px;
+      --code-theme-background: #191b20;
+      --table-row-odd-background: #26354230;
+      --code-theme-function: #aa8bff;
+      --code-theme-tag: #ff7c7c;
+      --code-theme-operator: #bdbdbd;
+      --sidebar-background: #1c1f27;
+      --base-background-color: #21242e;
+      --blockquote-background: #05070c30;
+    }
+
+    .token.tag {
+      color: #ebd884;
+    }
+
+    .markdown-section th {
+      border-bottom: 2px solid var(--table-cell-border-color);
+    }
+
+    .markdown-section td {
+      border-bottom: 2px solid var(--table-cell-border-color);
+    }
+  </style>
+</head>
+<body>
+  <div data-app id="main">Please wait...</div>
+  <script>
+    window.$docsify = {
+      el: '#main',
+      name: '',
+      repo: '',
+      loadSidebar: true
+    }
+    </script>
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-prism@latest/dist/docsify-prism.min.js"></script>ü
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="/prism-corn.js"></script>
+</body>
+</html>
