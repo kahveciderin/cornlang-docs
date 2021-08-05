@@ -90,6 +90,6 @@ First, this calls a builtin function. The `println` function is a builtin functi
 
 Second, you see the "Hello, world!" string. This is a string literal. A string literal is a string of characters surrounded by double quotes. We pass this string as an argument to the `println` function.
 
-Third, there is no line terminator in Cornlang. The cornpiler is smart enough to understand where each statement ends, so it doesn't require the programmer to manually terminate the line. If you wish hovewer, you can force it to terminate the line with a semicolon (`;`).
+Third, there is no line terminator in Cornlang. The cornpiler is smart enough to understand where each statement ends, so it doesn't require the programmer to manually terminate the line. If you wish however, you can force it to terminate the line with a semicolon (`;`).
 
 Now that you've written a simple "Hello, world!" program, let's move on to writing more complex programs.
