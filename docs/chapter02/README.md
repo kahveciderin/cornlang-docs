@@ -12,19 +12,19 @@ The first part of the guessing game program will ask for input and convert that 
 
 ```corn
 fun main => none {
-    var lstvar 20 i3 guess
+    var arr[20] byte guess
     init_arr(guess, 20, 0)
-    var i5 counter = 0
+    var int counter = 0
     print("Your guess: ")
     while(true) {
-        var i3 inchr = inchar()
-        if(inchr == "\n"[0]){
+        var byte inchr = inchar()
+        if(inchr == '\n'){
             break
         }
         arr_set_index(guess, counter, inchr)
         counter += 1
     }
-    var i5 g_int = to_int(guess)
+    var int g_int = to_int(guess)
     println("You guessed $n".fmt(g_int))
 }
 ```
@@ -39,10 +39,10 @@ fun main => none {
 As you saw in Chapter 1, `main` is the entry point of the program. This is where the program starts.
 <br>
 ```corn
-var lstvar 20 i3 guess
+var arr[20] int guess
 ```
 
-This line of the program creates a variable `guess` that is a list of 20 8-bit integers. `var` defines a variable, the next keyword `lstvar 20` specifies it is a list of 20 elements and i3 means the values this lits hold will be 8 bits long.
+This line of the program creates a variable `guess` that is a list of 20 8-bit integers. `var` defines a variable, the next keyword `arr[20]` specifies it is a list of 20 elements and i3 means the values this lits hold will be 8 bits long.
 
 <br>
 
@@ -55,7 +55,7 @@ This line of the program initializes the list of 20 elements in `guess` to 0.
 <br>
 
 ```corn
-    var i5 counter = 0
+    var int counter = 0
 ```
 
 This line creates a 32-bit variable called `counter` and initializes it to 0. We will see how this is useful in the next few lines.
@@ -79,7 +79,7 @@ This line creates a loop. A loop is a way of repeating a block of code until a c
 <br>
 
 ```corn
-        var i3 inchr = inchar()
+        var int inchr = inchar()
 ```
 
 This is where the magic happens! `inchar` is a function that reads a single character from the user. The `inchr` function returns an 8-bit integer (a character). We create a new variable called `inchr` and assign it the value returned by `inchar` to it.
@@ -87,10 +87,10 @@ This is where the magic happens! `inchar` is a function that reads a single char
 <br>
 
 ```corn
-        if(inchr == "\n"[0]){
+        if(inchr == '\n'){
 ```
 
-Another cool thing about `inchr` is that it will return the character `\n` (newline) if the user presses the enter key. This is a common way to signal the end of input. Here, we are checking if the `inchr` variable is equal to the character `\n` (newline). If it is, we break out of the loop. The `[0]` is a special syntax that means "the first element of the array or string". Here, we are using it to convert the string `"\n"` to a character.
+Another cool thing about `inchr` is that it will return the character `\n` (newline) if the user presses the enter key. This is a common way to signal the end of input. Here, we are checking if the `inchr` variable is equal to the character `\n` (newline). If it is, we break out of the loop.
 
 <br>
 
@@ -135,7 +135,7 @@ We end `while` block.
 <br>
 
 ```corn
-    var i5 g_int = to_int(guess)
+    var int g_int = to_int(guess)
 ```
 
 We initialize a variable called g_int (stands for "guess integer") to the value of the list `guess`, but while doing so we convert `guess` to an integer using the `to_int` function.
@@ -181,23 +181,23 @@ Now that you know what to do, let's implement it in our program:
 ```corn
 fun main => none {
     rand_start()
-    var i5 picked = rand_range(1, 128)
+    var int picked = rand_range(1, 128)
 
     println("Secret number: $n".fmt(picked))
 
-    var lstvar 20 i3 guess
+    var arr[20] byte guess
     init_arr(guess, 20, 0)
-    var i5 counter = 0
+    var int counter = 0
     print("Your guess: ")
     while(true) {
-        var i3 inchr = inchar()
-        if(inchr == "\n"[0]){
+        var byte inchr = inchar()
+        if(inchr == '\n'){
             break
         }
         arr_set_index(guess, counter, inchr)
         counter += 1
     }
-    var i5 g_int = to_int(guess)
+    var int g_int = to_int(guess)
     println("You guessed $n".fmt(g_int))
 }
 ```
@@ -216,23 +216,23 @@ Enter the following code to your `main.corn` file:
 ```corn
 fun main => none {
     rand_start()
-    var i5 picked = rand_range(1, 128)
-    var i5 total_guesses = 0
+    var int picked = rand_range(1, 128)
+    var int total_guesses = 0
     while(true) {
         total_guesses += 1
-        var lstvar 20 i3 guess
+        var arr[20] int guess
         init_arr(guess, 20, 0)
-        var i5 counter = 0
+        var int counter = 0
         print("Your guess: ")
         while(true) {
-            var i3 inchr = inchar()
-            if(inchr == "\n"[0]){
+            var byte inchr = inchar()
+            if(inchr == '\n'){
                 break
             }
             arr_set_index(guess, counter, inchr)
             counter += 1
         }
-        var i5 g_int = to_int(guess)
+        var int g_int = to_int(guess)
         if (g_int == picked) {
             break
         }
